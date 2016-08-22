@@ -26,7 +26,7 @@ Handlebars.registerHelper('videoSource', (videos)=> {
 const renderedTemplate = template(assets);
 
 // save files
-fs.writeFileSync(path.join('public', 'styles.css'), styles);
+fs.writeFileSync(path.join('public', 'styles.css'), styles.css);
 fs.writeFileSync(path.join('public', 'main.js'), javascript.code);
 fs.writeFileSync(path.join('public', 'index.html'), renderedTemplate);
 

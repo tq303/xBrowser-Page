@@ -1,0 +1,24 @@
+{
+  "name": "album-launch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:modernizr && node .",
+    "build:dev": "npm run build && watch 'npm run build' src",
+    "build:modernizr": "./node_modules/modernizr/bin/modernizr -c ./src/modernizr.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "handlebars": "^4.0.5",
+    "node-sass": "^3.8.0",
+    "uglify-js": "^2.7.3",
+    "watch": "^0.19.2"
+  },
+  "dependencies": {
+    "jquery": "^1.9.1",
+    "modernizr": "^3.3.1"
+  }
+}

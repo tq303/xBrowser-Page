@@ -39,3 +39,8 @@ jspm_packages
 .node_repl_history
 
 assets
+
+# Built files
+public/main.js
+public/index.html
+public/styles.css

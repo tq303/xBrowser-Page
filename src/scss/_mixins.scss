@@ -1,7 +1,31 @@
-@mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+@mixin prefix($property, $val) {
+  #{$property}:         $val;
+  -ms-#{$property}:     $val;
+  -moz-#{$property}:    $val;
+  -webkit-#{$property}: $val;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform:    $transform;
+  -ms-transform:     $transform;
+  transform:         $transform;
+}
+
+@mixin transition($range: all, $time: 1s, $ease: ease-in-out) {
+  -webkit-transition: $range $time $ease;
+  -moz-transition:    $range $time $ease;
+  transition:         $range $time $ease;
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
 }

@@ -9,7 +9,7 @@ const modernizr  = require("modernizr");
 // build assets
 const assets = {
 	videos: [],
-	title: 'Eton Messy'
+	title: 'Eton Messy: Album Launch'
 };
 
 // render src
